@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="30dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_liste_transfere">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/description_transfere"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:layout_marginLeft="50dp">
+            <EditText
+                android:id="@+id/delivery_per_user_email_transfere"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:hint="Email de l'agent"
+                android:textColor="#000000"/>
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:text="@string/ok"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:background="#ff8400"
+            android:id="@+id/validate_get_deliveries_by_email_transfere"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_all_transfere"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="-4dp"
+            android:text="all"
+            android:layout_marginTop="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/deliveries_by_agent_transfere"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@id/header_liste_transfere"
+        android:paddingBottom="30dp"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="0dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_transfere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:clickable="true"
+            app:layout_anchor="@id/deliveries_by_agent_transfere"
+            app:layout_anchorGravity=""
+            android:src="@drawable/tickgreen"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="right"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:elevation="16dp"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </FrameLayout>
+
+</RelativeLayout>

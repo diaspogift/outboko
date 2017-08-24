@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReceptionDecharge">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Décharge"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#ff8400"
+            android:textSize="25dp"
+            android:textScaleX="1.3"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_receipt_deliveries"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agence: "/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/agences"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:textScaleX="1.1"
+            android:textSize="16dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remetteur"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:textSize="25dp"
+            android:textColor="#ff8400"
+            android:id="@+id/btn_signature_remetteur"
+            android:layout_gravity="center"
+            android:background="@drawable/border_ricerca"
+            android:layout_marginTop="35dp"
+            android:onClick="getPartiSignature"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signature_remetteur"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recepteur"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:textSize="25dp"
+            android:id="@+id/btn_signature_recepteur"
+            android:textColor="#ff8400"
+            android:layout_gravity="center"
+            android:background="@drawable/border_ricerca"
+            android:layout_marginTop="35dp"
+            android:onClick="getPartiSignature"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signature_recepteur"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receptionner"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:textSize="25dp"
+            android:textColor="#ff8400"
+            android:layout_gravity="center"
+            android:background="@drawable/border_ricerca"
+            android:layout_marginTop="35dp"
+            android:onClick="receiptDeliveries_"/>
+    </LinearLayout>
+</ScrollView>

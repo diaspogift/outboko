@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_outboko" default="compile.module.outboko">
+  <dirname property="module.outboko.basedir" file="${ant.file.module_outboko}"/>
+  
+  <property name="module.jdk.home.outboko" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.outboko" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.outboko" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.outboko" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="outboko.output.dir" value="${module.outboko.basedir}/build/classes/production/OutBoko"/>
+  <property name="outboko.testoutput.dir" value="${module.outboko.basedir}/build/classes/test/OutBoko"/>
+  
+  <path id="outboko.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="outboko.module.production.classpath">
+    <path refid="${module.jdk.classpath.outboko}"/>
+  </path>
+  
+  <path id="outboko.runtime.production.module.classpath">
+    <pathelement location="${outboko.output.dir}"/>
+  </path>
+  
+  <path id="outboko.module.classpath">
+    <path refid="${module.jdk.classpath.outboko}"/>
+    <pathelement location="${outboko.output.dir}"/>
+  </path>
+  
+  <path id="outboko.runtime.module.classpath">
+    <pathelement location="${outboko.testoutput.dir}"/>
+    <pathelement location="${outboko.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.outboko">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.outboko">
+    <patternset refid="excluded.from.module.outboko"/>
+  </patternset>
+  
+  
+  <target name="compile.module.outboko" depends="compile.module.outboko.production,compile.module.outboko.tests" description="Compile module OutBoko"/>
+  
+  <target name="compile.module.outboko.production" depends="register.custom.compilers" description="Compile module OutBoko; production classes"/>
+  
+  <target name="compile.module.outboko.tests" depends="register.custom.compilers,compile.module.outboko.production" description="compile module OutBoko; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.outboko" description="cleanup module">
+    <delete dir="${outboko.output.dir}"/>
+    <delete dir="${outboko.testoutput.dir}"/>
+  </target>
+</project>

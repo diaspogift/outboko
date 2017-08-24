@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">OutBoko</string>
+    <string name="title_activity_deliveries">Deliveries</string>
+    <string name="no_internet">Pas d\'accès à internet</string>
+    <string name="yes_internet">Connecté à internet</string>
+    <string name="open">Ouvrir</string>
+    <string name="close">Fermer</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_place">Place</string>
+    <string name="hint_quarter">Quartier</string>
+    <string name="hint_town">Ville</string>
+
+    <string name="pickup">Récupération</string>
+
+    <string name="logout_message">Confirmer la déconnexion</string>
+
+    <string-array name="menus">
+        <item>Déconnexion</item>
+        <item>Réceptionner</item>
+        <item>Décharge pour transport</item>
+    </string-array>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="loading">Chargement</string>
+    <string name="copyright">\u00a9 2016 </string>
+</resources>

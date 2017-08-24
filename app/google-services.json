@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "848409672183",
+    "firebase_url": "https://outboko-d08ef.firebaseio.com",
+    "project_id": "outboko-d08ef",
+    "storage_bucket": "outboko-d08ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848409672183:android:ac0ce986d74d4a29",
+        "android_client_info": {
+          "package_name": "test.outbouko.is.cm.testoutboko"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848409672183-vho6m8f5fjlhfdh3c0j5926rshike92v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3ZccuRj9LM3uXq7cEe1ElNqR1Ubip99A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
